@@ -1,0 +1,338 @@
+print("Programa desenvolvido para efeturar a resolução da fórmula --> p v(q^r) <-> (pvq)^(pvr) \n")
+input("Press enter para continuar ")
+
+n01="sim"
+while n01=="sim":
+    thor="teste"
+    while thor!="1" and thor!="2":
+        thor=input("\nEsta fórmula é separada em 9 partes. Deseja ver como funciona ou já resolvê-las? \nDigite [1] para vêr e [2] para resolver\n")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
+        if thor!="1" and thor!="2":
+            print("\nErro! Você deve digitar 1 ou 2 para continuar. Tente novamente!")
+    if thor=="1":
+        print("")
+        print("As letras p q e r, recebem as proposições V e F, como vemos abaixo:\n")
+        print("p q r\n")
+        print("V V V")
+        print("V V F")
+        print("V F V")
+        print("V F F")
+        print("F V V")
+        print("F V F")
+        print("F F V")
+        print("F F F")
+        input("press enter para continuar")
+        print("\n\n\n\nSegundo as regras, deve-se resolver na ordem -> ~,(),^,v,->,<-> \n\n\n\n\n\n\n ")
+        input("press enter para continuar")
+        print("Como não temos negação, a primeira parte a ser resolvido é (q^r):\n")
+        print("p q r     (q^r)\n")
+        print("V V V        V")
+        print("V V F        F")
+        print("V F V        F")
+        print("V F F        F")
+        print("F V V        V")
+        print("F V F        F")
+        print("F F V        F")
+        print("F F F        F")
+        input("press enter para continuar")
+        print("Seguindo a ordem, agora se resolve (pvq)")
+        print("p q r      (qvr)\n")
+        print("V V V        V")
+        print("V V F        V")
+        print("V F V        V")
+        print("V F F        V")
+        print("F V V        V")
+        print("F V F        V")
+        print("F F V        F")
+        print("F F F        F")
+        input("press enter para continuar\n")
+        print("Próximo passo, resolver (pvr)")
+        print("p q r      pvr\n")
+        print("V V V        V")
+        print("V V F        V")
+        print("V F V        V")
+        print("V F F        V")
+        print("F V V        V")
+        print("F V F        F")
+        print("F F V        V")
+        print("F F F        F")
+        input("press enter para continuar\n")
+        print("Como todas as operações dentro dos parênteses foram feitas, então vamos resolver o lado esquerdo")
+        print("p (q^r)      Pv(qvr)\n")
+        print("V   V          V")
+        print("V   F          V")
+        print("V   F          V")
+        print("V   F          V")
+        print("F   V          V")
+        print("F   F          F")
+        print("F   F          F")
+        print("F   F          F")
+        input("press enter para continuar\n")
+        print("Agora o lado direito")
+        print("(pvq)   (qvr)    (pvq)^(q^r)\n")
+        print("  V       V          V")
+        print("  V       V          V")
+        print("  V       V          V")
+        print("  V       V          V")
+        print("  V       V          V")
+        print("  V       F          F")
+        print("  F       V          F")
+        print("  F       F          F")
+        input("press enter para continuar\n")
+        print("Por fim, a bifurcação do lado esquerdo com o direito")
+        print("pv(q^r) (pvq)^(pvr)    pv(q^r)<->(pvq)^(pvr)\n")
+        print("   V         V                  V")
+        print("   V         V                  V")
+        print("   V         V                  V")
+        print("   V         V                  V")
+        print("   V         V                  V")
+        print("   F         F                  V")
+        print("   F         F                  V")
+        print("   F         F                  V")
+        input("press enter para continuar")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("\nConcluímos que é uma tautologia. Pois todas as sentenças terminaram em v\n")
+
+    if thor=="2":
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("Podemos resolver as operações:       (q^r) (pvq) (pvr) pv(qvr) (pvq)^(pvr) pv(qvr)<->(pvq)^(pvr)")
+        opcao=(input("                                       1     2     3      4         5               6\nEscolha uma opção\n->"))
+
+        if opcao=="1":
+            q="teste"
+            r="teste"
+            while (q!="v" and q!="f") or (r!="v" and r!="f"):
+                q=input("A proposição 'q' é v ou f? ")
+                r=input("A proposição 'r' é v ou f? ")
+                if (q!="v" and q!="f") or (r!="v" and r!="f"):
+                    print("Caracteres não reconhecidos. Por favor, digite V ou F")
+
+            if q=="v" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:")
+                print("q r  (q^r)")
+                print("v v    v")
+
+            if q=="v" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("q r  (q^r)")
+                print("v f    f")
+
+            if q=="f" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:)")
+                print("q r  (q^r)")
+                print("f v    v")
+
+            if q=="f" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("q r  (q^r)")
+                print("f f    f")
+
+        if opcao=="2":
+            p="teste"
+            q="teste"
+            while (p!="v" and p!="f") or (q!="v" and q!="f"):
+                p=input("A proposição 'p' é v ou f? ")
+                q=input("A proposição 'q' é v ou f? ")
+                if (p!="v" and p!="f") or (q!="v" and q!="f"):
+                    print("Caracteres não reconhecidos. Por favor, digite V ou F")
+
+            if p=="v" and q=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:")
+                print("p q  (pvq)")
+                print("v v    v")
+
+            if p=="v" and q=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("p q  (pvq)")
+                print("v f    v")
+
+            if p=="f" and q=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:")
+                print("p q  (pvq)")
+                print("f v    v")
+
+            if p=="f" and q=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("p q  (pvq)")
+                print("f f    f")
+
+        if opcao=="3":
+            p="teste"
+            r="teste"
+            while (p!="v" and p!="f") or (r!="v" and r!="f"):
+                p=input("A proposição 'p' é v ou f? ")
+                r=input("A proposição 'r' é v ou f? ")
+                if (p!="v" and p!="f") or (r!="v" and r!="f"):
+                    print("Caracteres não reconhecidos. Por favor, digite V ou F")
+
+            if p=="v" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:")
+                print("p r  (p^r)")
+                print("v v    v")
+
+            if p=="v" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("p r  (p^r)")
+                print("v f    v")
+
+            if p=="f" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:)")
+                print("p r  (p^r)")
+                print("f v    v")
+
+            if p=="f" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("p r  (p^r)")
+                print("f f    v")
+
+        if opcao=="4":
+            p="teste"
+            r="teste"
+            while (p!="v" and p!="f") or (r!="v" and r!="f"):
+                p=input("A proposição  'p' é v ou f? ")
+                r=input("A proposição (q^r) é v ou f? ")
+                if (p!="v" and p!="f") or (r!="v" and r!="f"):
+                    print("Caracteres não reconhecidos. Por favor, digite V ou F")
+
+            if p=="v" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:")
+                print("p  (q^r)  pv(q^r)")
+                print("v    v       v")
+
+            if p=="v" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("p  (q^r) pv(q^r)")
+                print("v    f      v")
+
+            if p=="f" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:)")
+                print("p (q^r)  pv(q^r)")
+                print("f   v       v")
+
+            if p=="f" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("p (q^r)  pv(q^r)")
+                print("f   f       f")
+
+
+        if opcao=="5":
+            p="teste"
+            r="teste"
+            while (p!="v" and p!="f") or (r!="v" and r!="f"):
+                p=input("A proposição (pvq) é v ou f? ")
+                r=input("A proposição (pvr) é v ou f? ")
+                if (p!="v" and p!="f") or (r!="v" and r!="f"):
+                    print("Caracteres não reconhecidos. Por favor, digite V ou F")
+
+            if p=="v" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:")
+                print("(pvq)  (p^r)  (pvq)^(pvr)")
+                print("  v      v         v")
+
+            if p=="v" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("pvq)  (p^r) (pvq)^(pvr)")
+                print(" v      f        f")
+
+            if p=="f" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:)")
+                print("(pvq) (p^r)  (pvq)^(pvr)")
+                print("  f     v         f")
+
+            if p=="f" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("(pvq) (p^r)  (pvq)(qvr)")
+                print("  f     f       f")
+
+        if opcao=="6":
+            p="teste"
+            r="teste"
+            while (p!="v" and p!="f") or (r!="v" and r!="f"):
+                p=input("A proposição (pv(qvr) é v ou f? ")
+                r=input("A proposição (pvq)<->(pvq)^(pvr) é v ou f? ")
+                if (p!="v" and p!="f") or (r!="v" and r!="f"):
+                    print("Caracteres não reconhecidos. Por favor, digite V ou F")
+
+
+            if p=="v" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:")
+                print("(pv(qvr)  (pvq)^(pvr)  (pv(qvr)<->(pvq)^(pvr)")
+                print("   v           v                  v")
+
+            if p=="v" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("(pv(qvr)  (pvq)^(pvr)  (pv(qvr)<->(pvq)^(pvr)")
+                print("   v           f                  v")
+
+            if p=="f" and r=="v":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução, é:)")
+                print("(pv(qvr)  (pvq)^(pvr)  (pv(qvr)<->(pvq)^(pvr)")
+                print("   f           v                  v")
+
+            if p=="f" and r=="f":
+                import os
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("a resolução,é:")
+                print("(pv(qvr)  (pvq)^(pvr)  (pv(qvr)<->(pvq)^(pvr)")
+                print("   f           f                  v")
+
+    print()
+    ficar="teste"
+    while ficar!="sim" and ficar!="não":
+        ficar=input("Deseja resolver mais proposições? ")
+        if ficar!="sim" and ficar!="não":
+            print("Comando incorreto. Repita a resposta.")
+    print()
+
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
+print("\n\n\n\n\n\nPrograma finalizado!")
