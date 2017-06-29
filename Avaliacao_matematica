@@ -113,7 +113,13 @@ while n01=="sim":
         import os
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Podemos resolver as operações:       (q^r) (pvq) (pvr) pv(qvr) (pvq)^(pvr) pv(qvr)<->(pvq)^(pvr)")
-        opcao=(input("                                       1     2     3      4         5               6\nEscolha uma opção\n->"))
+        opcao="teste"
+        while (opcao!=1,2,3,4,5,6):
+            opcao=(input("                                       1     2     3      4         5               6\nEscolha uma opção\n->"))
+            import os
+            os.system('cls' if os.name == 'nt' else 'clear')
+            if (opcao!=1,2,3,4,5,6):
+                print("\nopção não identificada. Por favor, digite 1,2,3,4,5 ou 6\n")
         if opcao=="1":
             q="teste"
             r="teste"
