@@ -23,8 +23,12 @@ while n01=="sim":
         print("F F V")
         print("F F F")
         input("press enter para continuar")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("\n\n\n\nSegundo as regras, deve-se resolver na ordem -> ~,(),^,v,->,<-> \n\n\n\n\n\n\n ")
         input("press enter para continuar")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Como não temos negação, a primeira parte a ser resolvido é (q^r):\n")
         print("p q r     (q^r)\n")
         print("V V V        V")
@@ -36,6 +40,8 @@ while n01=="sim":
         print("F F V        F")
         print("F F F        F")
         input("press enter para continuar")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Seguindo a ordem, agora se resolve (pvq)")
         print("p q r      (qvr)\n")
         print("V V V        V")
@@ -47,6 +53,8 @@ while n01=="sim":
         print("F F V        F")
         print("F F F        F")
         input("press enter para continuar\n")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Próximo passo, resolver (pvr)")
         print("p q r      pvr\n")
         print("V V V        V")
@@ -58,6 +66,8 @@ while n01=="sim":
         print("F F V        V")
         print("F F F        F")
         input("press enter para continuar\n")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Como todas as operações dentro dos parênteses foram feitas, então vamos resolver o lado esquerdo")
         print("p (q^r)      Pv(qvr)\n")
         print("V   V          V")
@@ -69,6 +79,8 @@ while n01=="sim":
         print("F   F          F")
         print("F   F          F")
         input("press enter para continuar\n")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Agora o lado direito")
         print("(pvq)   (qvr)    (pvq)^(q^r)\n")
         print("  V       V          V")
@@ -80,6 +92,8 @@ while n01=="sim":
         print("  F       V          F")
         print("  F       F          F")
         input("press enter para continuar\n")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("Por fim, a bifurcação do lado esquerdo com o direito")
         print("pv(q^r) (pvq)^(pvr)    pv(q^r)<->(pvq)^(pvr)\n")
         print("   V         V                  V")
@@ -100,7 +114,6 @@ while n01=="sim":
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Podemos resolver as operações:       (q^r) (pvq) (pvr) pv(qvr) (pvq)^(pvr) pv(qvr)<->(pvq)^(pvr)")
         opcao=(input("                                       1     2     3      4         5               6\nEscolha uma opção\n->"))
-
         if opcao=="1":
             q="teste"
             r="teste"
@@ -326,11 +339,13 @@ while n01=="sim":
                 print("   f           f                  v")
 
     print()
-    ficar="teste"
-    while ficar!="sim" and ficar!="não":
-        ficar=input("Deseja resolver mais proposições? ")
-        if ficar!="sim" and ficar!="não":
-            print("Comando incorreto. Repita a resposta.")
+    n01="teste"
+    while n01!="sim" and n01!="não":
+        n01=input("\nDeseja resolver mais proposições? Digite sim ou não: ")
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')
+        if n01!="sim" and n01!="não":
+            print("\nErro, digito não identificado")
     print()
 
 import os
